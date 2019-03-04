@@ -17,7 +17,7 @@ helpers do
 end
 
 before do
-  if session[:user_id].inspect != nil
+  if session[:user_id] != nil
     @user = User.find(session[:user_id])
   else
     @user = nil
