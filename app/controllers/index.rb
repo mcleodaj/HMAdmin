@@ -1,7 +1,7 @@
 use Rack::Session::Cookie, :key => 'rack.session',
-                           :domain => 'admin.holidaymarina.net'
+                           :domain => 'admin.holidaymarina.net',
                            :path => '/',
-                           :expire_after => 2592000
+                           :expire_after => 2592000,
                            :secret => ENV['secret']
 
 register do
