@@ -7,6 +7,7 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'bcrypt'
 gem 'mysql2'
+gem 'pundit'
 
 # Use Thin for our web server
 gem 'thin'
