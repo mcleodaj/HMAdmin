@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" style="min-height: 100%">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/css/application.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body style="min-height: 100%; background-image: linear-gradient(to bottom, #003355, #003355); background-position: top left;  background-size: 100%;  background-repeat: repeat;" >
+  <page class=h-100>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style=" background-image: linear-gradient(to bottom, #003366, #003366); background-position: top left;  background-size: 100%;  background-repeat: repeat;">
+      <div class="container-fluid"> <a href="/" class= "px-1 img-large img-fluid"><img class="img-fluid d-block flex-center" src="/imgs/Marina_Pics/Icons/50h/Artboard 1.png"></a> <a class="navbar-brand" href="/">
+        <!-- <i class="fa d-inline fa-lg fa-stop-circle" src="/imgs/Marina_Pics/Icons/100w/100.png"></i> -->
+        <b> <img class="img-fluid d-block flex-center" src="/imgs/Marina_Pics/Text_No_Lines/50h/Artboard 1.png"></b>
+      </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar10">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar10">
+        <ul class="navbar-nav ml-auto">
+          <% if @user %>
+          <li class="nav-item text-light"> <a class="nav-link" href="/">Home</a> </li>
+          <li class="nav-item text-light"> <a class="nav-link" href="/price">Gas Price</a> </li>
+          <!-- <li class="nav-item text-light"> <a class="nav-link" href="/email">Email</a> </li> -->
+          <li class="nav-item"> <a class="nav-link" href="/logout">Logout</a> </li>
+          <% else %>
+          <li class="nav-item text-light"> <a class="nav-link" href="/login">Login</a> </li>
+          <% end %>
+      </div>
+    </div>
+  </nav>
+  <div style="padding-top: 76px">
+  <%= yield %>
+  </div>
+  <footer>
+    <div class="" style=" background-image: linear-gradient(to bottom, #003366, #003355); background-position: top left;  background-size: 100%;  background-repeat: repeat;">
+      <div class="container">
+        <div class="row">
+          <div class="pt-4 col-md-6">
+            <!-- <h2 class="mb-4 text-light">Mapsite</h2> -->
+            <ul class="list-unstyled text-light"> 
+              <br>
+              <% if @user %>
+              <a href="/" class="text-light py-1 t-m">Home</a> <br> 
+              <a href="/price" class="text-light py-1 t-m">Services</a> <br> 
+              <!-- <a href="/email" class="text-light py-1 t-m">Storage</a> <br>  -->
+              <a href="/logout" class="text-light py-1 t-m">Logout</a> <br> 
+              <% else %>
+              <a href="/login" class="text-light py-1 t-m">Login</a> <br> 
+              <% end %>
+            </ul>
+          </div>
+          <div class="pt-4 col-md-6">
+            <h2 class="mb-4 text-light">Contact</h2>
+            <p class="text-light"> <a href="#" class="text-light">
+              <i class="fa d-inline mr-3 text-muted fa-phone"></i></a>704-892-0561</p>
+              <p class="text-light"> <a href="mailto:marina@mcleodcorp.com" class="text-light">
+                <i class="fa d-inline mr-3 text-muted fa-envelope-o"></i>marina@mcleodcorp.com</a> </p>
+                <p> <a href="https://www.google.com/maps/place/20139+Henderson+Rd,+Cornelius,+NC+28031" class="text-light">
+                  <i class="fa d-inline mr-3 fa-map-marker text-muted"></i>20139 Henderson Road, Cornelius, NC 28031</a> </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mt-3">
+                  <p class="text-center text-light">© 2019 Holiday Marina - All rights reserved. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+  </page>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="/js/application.js"></script>
+    </body>
+</html>
