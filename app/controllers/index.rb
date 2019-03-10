@@ -40,12 +40,16 @@ get '/price', :auth => :user do
   erb :price
 end
 
-post '/price', :auth => :user do
+post '/price' do
   cache_control :public, :max_age => 31536000
   session.delete 'init'
-  session[:user_id] = params[:user_id]
-  File.open("public/gas_price.txt", "w") { |file| file.puts params[:gas_price]}
-  redirect '/price'
+  @user = User.find(params[:user_id])
+  if @user != nil
+    File.open("public/gas_price.txt", "w") { |file| file.puts params[:gas_price]}
+    redirect '/price'
+  else
+    redirect 'login'
+  end
 end
 
 get '/login' do
