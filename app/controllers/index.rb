@@ -1,4 +1,6 @@
-enable :sessions
+use Rack::Session::Cookie, :key => 'rack.session',
+                           :path => '/',
+                           :secret => ENV['secret']
 
 register do
   def auth (type)
