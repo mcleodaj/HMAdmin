@@ -12,4 +12,7 @@ configure do
   set :views, File.join(Sinatra::Application.root, "app", "views")
 end
 
+map('/') { run ApplicationController }
+
+require 'rack/session/moneta'
 run Sinatra::Application
