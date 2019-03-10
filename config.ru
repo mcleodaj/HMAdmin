@@ -12,6 +12,4 @@ configure do
   set :views, File.join(Sinatra::Application.root, "app", "views")
 end
 
-map('/') { run ApplicationController }
-
 run Sinatra::Application
