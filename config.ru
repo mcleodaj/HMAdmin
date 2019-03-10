@@ -14,5 +14,4 @@ end
 
 map('/') { run ApplicationController }
 
-require 'rack/session/moneta'
 run Sinatra::Application
