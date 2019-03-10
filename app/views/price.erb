@@ -21,6 +21,7 @@
           <h1 class="mb-4">Set Gas Price</h1>
           <form method="POST" action="/price">
             <div class="form-group"><input type="text" class="form-control" placeholder="Enter New Price" name="gas_price"> </div>
+            <input type="hidden" id="user_id" name="user_id" value="<%= @user.id %>">
             <div class="form-group mb-3"> <small class="form-text text-muted text-right"></small> </div> <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
