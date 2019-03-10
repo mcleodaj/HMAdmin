@@ -1,7 +1,3 @@
-use Rack::Session::Cookie, :key => 'rack.session',
-                           :path => '/',
-                           :secret => ENV['secret']
-
 register do
   def auth (type)
     condition do
@@ -63,9 +59,9 @@ post '/login' do
   end
 end
 
-get '/logout' do
+post '/logout' do
   cache_control :public, :max_age => 31536000
   session[:user_id] = nil
   session.clear
   redirect "/"
-end
+end  

@@ -25,7 +25,8 @@
           <li class="nav-item text-light"> <a class="nav-link" href="/">Home</a> </li>
           <li class="nav-item text-light"> <a class="nav-link" href="/price">Gas Price</a> </li>
           <!-- <li class="nav-item text-light"> <a class="nav-link" href="/email">Email</a> </li> -->
-          <li class="nav-item"> <a class="nav-link" href="/logout">Logout</a> </li>
+          <li class="nav-item"> <form method="POST" action="/logout"> <button type="submit" class="btn btn-white">Logout</button>
+          </form> </li>
           <% else %>
           <li class="nav-item text-light"> <a class="nav-link" href="/login">Login</a> </li>
           <% end %>
@@ -47,7 +48,8 @@
               <a href="/" class="text-light py-1 t-m">Home</a> <br> 
               <a href="/price" class="text-light py-1 t-m">Services</a> <br> 
               <!-- <a href="/email" class="text-light py-1 t-m">Storage</a> <br>  -->
-              <a href="/logout" class="text-light py-1 t-m">Logout</a> <br> 
+              <form method="POST" action="/logout"> <button type="submit" class="btn btn-white">Logout</button>
+              </form> <br> 
               <% else %>
               <a href="/login" class="text-light py-1 t-m">Login</a> <br> 
               <% end %>
